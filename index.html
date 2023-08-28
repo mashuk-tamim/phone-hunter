@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter API</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="flex justify-around">
+            <h3>Hot Gadget</h3>
+            <button class="btn btn-primary">Sign up</button>
+        </div>
+    </header>
+    <main>
+        <!-- banner -->
+        <section class="w-3/4 text-center mx-auto my-10">
+            <h1 class="font-bold text-6xl">Apple Iphone 13 Pro Max</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, vel magnam. Quas exercitationem
+                blanditiis tempora sequi maxime sed cupiditate. Sit doloremque adipisci quod velit recusandae magni
+                exercitationem porro nam modi.</p>
+            <button class="btn btn-primary">Buy Now</button>
+            <img class="w-1/2 mx-auto my-10" src="images/apple-iphone-13-pro-max-1.jpg" alt="">
+        </section>
+        <!-- phone search -->
+        <section class="w-11/12 mx-auto text-center my-10">
+            <input id="search-field" type="text" placeholder="search..." class="input input-bordered w-full max-w-xs" />
+            <button id="search-btn" onclick="handleSearch()" class="btn btn-primary">Search</button>
+        </section>
+        <!-- phone search2
+        <section class="w-11/12 mx-auto text-center my-10">
+            <input id="search-field2" type="text" placeholder="search..." class="input input-bordered w-full max-w-xs" />
+            <button id="search-btn2" onclick="handleSearch2()" class="btn btn-primary">Search2</button>
+        </section> -->
+
+        <!-- phone cards -->
+        <section>
+            <!-- loading spinner -->
+            <div id="loading-spinner" class="text-center hidden">
+                <span class="loading loading-infinity loading-lg text-primary"></span>
+            </div>
+            <!-- phone-container -->
+            <div id="phone-container" class="grid grid-cols-3 gap-5 w-11/12 mx-auto">
+
+            </div>
+            <div id="show-all-container" class="hidden text-center my-5">
+                <button onclick="handleShowAll()" class="btn btn-primary">Show all</button>
+            </div>
+        </section>
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+                <form method="dialog" class="modal-box">
+                    <div id="show-details-container">
+                        
+                    </div>
+                    <div class="modal-action">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </div>
+                </form>
+            </dialog>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="js/phone.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>
